@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,131 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnu-VJ-f3y">
+                                <rect key="frame" x="25" y="433" width="77" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="91M-Cv-0wr"/>
+                                    <constraint firstAttribute="height" constant="77" id="HlA-Bq-N2Y"/>
+                                </constraints>
+                                <state key="normal" title="Save" image="save"/>
+                                <connections>
+                                    <action selector="SavePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7AN-xl-Lgo"/>
+                                    <action selector="TakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Kh-GI-L7U"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sUb-O8-3EI">
+                                <rect key="frame" x="44" y="43" width="306" height="338"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="8Y5-5j-meJ"/>
+                                    <constraint firstAttribute="width" constant="306" id="vqL-wc-OUt"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhY-rl-bYX">
+                                <rect key="frame" x="271" y="450" width="62" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="A9a-hd-zpl"/>
+                                    <constraint firstAttribute="width" constant="62" id="cMg-8R-xSj"/>
+                                </constraints>
+                                <state key="normal" title="Gallery" image="gallery"/>
+                                <connections>
+                                    <segue destination="20d-wl-4Ha" kind="show" id="Wx1-ip-1b3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puh-rG-zv2">
+                                <rect key="frame" x="147" y="450" width="74" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="YUm-0U-PQp"/>
+                                    <constraint firstAttribute="width" constant="74" id="eZF-ju-qIg"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="camera"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90286752377828305" green="0.87842730208354558" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sUb-O8-3EI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="9.5" id="4r4-gf-lJU"/>
+                            <constraint firstItem="Pnu-VJ-f3y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="138" id="7mp-9n-k8w"/>
+                            <constraint firstItem="PhY-rl-bYX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="114.5" id="H9c-iT-jLx"/>
+                            <constraint firstItem="sUb-O8-3EI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-121.5" id="Ro6-pN-9Zk"/>
+                            <constraint firstItem="Puh-rG-zv2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-3.5" id="XDQ-Mz-aDW"/>
+                            <constraint firstItem="Pnu-VJ-f3y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-124" id="cdk-Sr-6FZ"/>
+                            <constraint firstItem="Pnu-VJ-f3y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="138" id="e98-Jb-ae4"/>
+                            <constraint firstItem="Pnu-VJ-f3y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-124" id="kGd-Sb-rCd"/>
+                            <constraint firstItem="PhY-rl-bYX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="143" id="r8J-g7-7O2"/>
+                            <constraint firstItem="Puh-rG-zv2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="143.5" id="uuR-oL-8bZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="myImageView" destination="sUb-O8-3EI" id="YVJ-5B-RZs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="192.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--UIViewController-->
+        <scene sceneID="0i5-lm-iVI">
+            <objects>
+                <viewController id="20d-wl-4Ha" userLabel="UIViewController" customClass="GalleryViewController" customModule="PhotoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZdQ-we-Occ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FBx-Hd-BFq">
+                                <rect key="frame" x="30" y="114" width="315" height="331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="315" id="ENq-Sf-jBj"/>
+                                    <constraint firstAttribute="height" constant="331" id="WW3-uq-hJG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gallery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHb-6s-ukT">
+                                <rect key="frame" x="142" y="54" width="111" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="Wc3-KQ-9SH"/>
+                                    <constraint firstAttribute="height" constant="42" id="WgU-b7-ZCe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keQ-eX-3PA">
+                                <rect key="frame" x="138" y="498" width="99" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="5ns-Je-RxD"/>
+                                    <constraint firstAttribute="width" constant="99" id="wx6-nK-4wb"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="home"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90286752380000002" green="0.87842730209999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FBx-Hd-BFq" firstAttribute="centerX" secondItem="ZdQ-we-Occ" secondAttribute="centerX" id="20V-hW-jAs"/>
+                            <constraint firstItem="ZHb-6s-ukT" firstAttribute="centerX" secondItem="ZdQ-we-Occ" secondAttribute="centerX" constant="10" id="JOd-2g-efv"/>
+                            <constraint firstItem="ZHb-6s-ukT" firstAttribute="centerY" secondItem="ZdQ-we-Occ" secondAttribute="centerY" constant="-258.5" id="TWU-fc-Ft4"/>
+                            <constraint firstItem="FBx-Hd-BFq" firstAttribute="centerY" secondItem="ZdQ-we-Occ" secondAttribute="centerY" constant="-54" id="bYQ-X2-UoF"/>
+                            <constraint firstItem="keQ-eX-3PA" firstAttribute="centerY" secondItem="ZdQ-we-Occ" secondAttribute="centerY" constant="217.5" id="few-oF-6TR"/>
+                            <constraint firstItem="keQ-eX-3PA" firstAttribute="centerX" secondItem="ZdQ-we-Occ" secondAttribute="centerX" id="uzH-ud-GSY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uqx-xk-wiT"/>
+                    </view>
+                    <connections>
+                        <outlet property="galleryImageView" destination="FBx-Hd-BFq" id="gW9-iI-coG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ht3-qE-PSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877.60000000000002" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="1300" height="989"/>
+        <image name="gallery" width="512" height="512"/>
+        <image name="home" width="512" height="512"/>
+        <image name="save" width="512" height="512"/>
+    </resources>
 </document>

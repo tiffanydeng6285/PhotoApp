@@ -13,6 +13,7 @@
 		CCF1A34822D8C73700BFD67F /* PhotoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCF1A34622D8C73700BFD67F /* PhotoApp.xcdatamodeld */; };
 		CCF1A34A22D8C73E00BFD67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCF1A34922D8C73E00BFD67F /* Assets.xcassets */; };
 		CCF1A34D22D8C73E00BFD67F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF1A34B22D8C73E00BFD67F /* LaunchScreen.storyboard */; };
+		CCF1A35522D8CAE700BFD67F /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF1A35422D8CAE600BFD67F /* GalleryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CCF1A34922D8C73E00BFD67F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCF1A34C22D8C73E00BFD67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCF1A34E22D8C73E00BFD67F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCF1A35422D8CAE600BFD67F /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				CCF1A34B22D8C73E00BFD67F /* LaunchScreen.storyboard */,
 				CCF1A34E22D8C73E00BFD67F /* Info.plist */,
 				CCF1A34622D8C73700BFD67F /* PhotoApp.xcdatamodeld */,
+				CCF1A35422D8CAE600BFD67F /* GalleryViewController.swift */,
 			);
 			path = PhotoApp;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCF1A34222D8C73700BFD67F /* ViewController.swift in Sources */,
+				CCF1A35522D8CAE700BFD67F /* GalleryViewController.swift in Sources */,
 				CCF1A34022D8C73700BFD67F /* AppDelegate.swift in Sources */,
 				CCF1A34822D8C73700BFD67F /* PhotoApp.xcdatamodeld in Sources */,
 			);
